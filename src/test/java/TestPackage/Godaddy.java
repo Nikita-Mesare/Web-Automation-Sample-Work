@@ -9,7 +9,6 @@ import org.testng.annotations.*;
 public class Godaddy {
 		
 		WebDriver driver = new EdgeDriver();
-		String expectedTitle = "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IN";
 		
 		@BeforeTest
 		public void launch() {
@@ -21,16 +20,13 @@ public class Godaddy {
 		public void teardown() {	
 		driver.quit(); 
 		}
-
-		
-		
+	
 		@Test
 		public void verifyTitle() {
 			String expectedTitle = "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IN";
 			String actualTitle = driver.getTitle();
 			Assert.assertEquals(actualTitle, expectedTitle, "Title does not match");
 		}
-		
 		
 		@Test
 		public void verifyURL() {
